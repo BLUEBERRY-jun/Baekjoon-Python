@@ -11,3 +11,7 @@ elif len(set(dice))==2:
 elif len(set(dice))==3:
     num = max(dice)
     print (num*100)
+
+# set(dice)는 숫자가 아니라서 사칙연산이 불가능하다
+# list tupple은 연결 반복은 가능하다
+# 객체.매서드()
