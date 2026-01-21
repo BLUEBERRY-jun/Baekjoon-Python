@@ -30,18 +30,33 @@ else:
     
 '''
 
-word = input()
+# word = input()
 
-x=list(word)
-left = 0
-right = len(x)-1
-palindrome=1
+# x=list(word)
+# left = 0
+# right = len(x)-1
+# palindrome=1
 
-while left<right:
-    if x[left]!=x[right]:
-        palindrome=0
+# while left<right:
+#     if x[left]!=x[right]:
+#         palindrome=0
+#         break
+#     left += 1
+#     right -= 1
+
+# print (palindrome)
+
+
+alphabet = input()
+
+result = 1
+N=len(alphabet)//2
+
+for i in range(N):
+    if alphabet[i]==alphabet[-(1+i)]:
+        continue
+    elif alphabet[i]!=alphabet[-(1+i)]:
+        result = 0
         break
-    left += 1
-    right -= 1
 
-print (palindrome)
+print (result)
