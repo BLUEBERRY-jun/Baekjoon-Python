@@ -36,12 +36,23 @@ for i in range (n-1, 0, -1):
 # print(*ans, sep="\n")
 
 
-N = int(input())
+# N = int(input())
 
-j = -1
+# j = -1
+# lines = []
+# for i in range (N):
+#     j += 2
+#     lines.append(" "*(N-1-i)+"*"*j)
+
+# print(*lines + lines[:-1][::-1], sep="\n")    
+
+
+import sys
+N = int(sys.stdin.readline())
+
 lines = []
-for i in range (N):
-    j += 2
-    lines.append(" "*(N-1-i)+"*"*j)
+for i in range(N):
+    lines.append(" "*(N-1-i)+"*"*(i*2+1))  #변수명.append() =사용 ㄴㄴ
+    
 
-print(*lines + lines[:-1][::-1], sep="\n")    
+print (*lines + lines[:-1][::-1], sep="\n") #글자 ::-1 리스트 ::-1 차이 인지
