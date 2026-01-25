@@ -47,16 +47,34 @@ else:
 # print (palindrome)
 
 
-alphabet = input()
+# alphabet = input()
 
-result = 1
-N=len(alphabet)//2
+# result = 1
+# N=len(alphabet)//2
 
-for i in range(N):
-    if alphabet[i]==alphabet[-(1+i)]:
-        continue
-    elif alphabet[i]!=alphabet[-(1+i)]:
+# for i in range(N):
+#     if alphabet[i]==alphabet[-(1+i)]:
+#         continue
+#     elif alphabet[i]!=alphabet[-(1+i)]:
+#         result = 0
+#         break
+
+# print (result)
+
+
+
+import sys
+
+word = list(sys.stdin.readline().strip()) #strip으로 마지막에 있는 \n삭제
+
+result = 1 #0으로 하면 a한글자일때 0으로 출력되서 안됨
+for i in range(len(word)//2):
+    if word[i] == word[::-1][i]: #word[::-1][i] word[i][::-1] 차이 인지
+        result = 1
+    else:
         result = 0
         break
 
 print (result)
+
+#다음엔 for문 없이 만들어 볼것
