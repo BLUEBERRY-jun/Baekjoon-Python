@@ -21,12 +21,32 @@
 # paper.count(1)는 1을 직접 들고 있는게 아니라 하나씩 꺼내서 세야함
 
 
+# import sys
+
+# N = int(sys.stdin.readline())
+
+# paper = []
+# for _ in range(100):
+#     paper.append([0]*100)
+
+# for _ in range(N):
+#     x, y = map(int, sys.stdin.readline().split())
+#     for i in range(x, x+10):
+#         for j in range(y, y+10):
+#             paper[i][j] = 1
+
+# total = 0
+# for row in paper:
+#     total += row.count(1)
+# print(total)  # 2번째 내일 다시
+
+
 import sys
 
 N = int(sys.stdin.readline())
 
 paper = []
-for _ in range(100):
+for _ in range (100):
     paper.append([0]*100)
 
 for _ in range(N):
@@ -36,6 +56,8 @@ for _ in range(N):
             paper[i][j] = 1
 
 total = 0
-for row in paper:
-    total += row.count(1)
-print(total)  # 2번째 내일 다시
+
+for i in range(100):
+    total += paper[i].count(1)
+
+print(total)    #3번째
