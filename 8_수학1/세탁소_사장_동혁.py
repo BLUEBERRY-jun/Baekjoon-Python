@@ -19,15 +19,29 @@
 #     print()
 
 
+# T = int(input())
+# coins = [25,10,5,1]
+
+# for _ in range(T):
+#     x = int(input())
+    
+#     result = []
+#     for coin in coins:
+#         result.append(x//coin)
+#         x %= coin
+        
+#     print (*result)
+
+
+
 T = int(input())
-coins = [25,10,5,1]
+coins = [25, 10, 5, 1]
+
 
 for _ in range(T):
     x = int(input())
-    
     result = []
     for coin in coins:
-        result.append(x//coin)
-        x %= coin
-        
+        result.append(x // coin)
+        x = x % coin
     print (*result)
