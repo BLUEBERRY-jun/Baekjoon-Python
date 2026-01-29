@@ -29,6 +29,23 @@
 
 
 
+# import sys
+
+# N, B = sys.stdin.readline().split()
+# B = int(B)
+# table = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+# N = N[::-1]
+# x = 0
+# result = 0
+
+# for i in range(len(N)):
+#     x = table.index(N[i])
+#     result += x * (B ** i)  #B에 진법 
+
+# print (result)  #2번쨰 
+
+
 import sys
 
 N, B = sys.stdin.readline().split()
@@ -40,7 +57,7 @@ x = 0
 result = 0
 
 for i in range(len(N)):
-    x = table.index(N[i])
-    result += x * (B ** i)  #B에 진법 
+    x = table.index(N[i])   #index()
+    result += x * (B ** i)
 
-print (result)  #2번쨰 
+print (result)  #3번째
