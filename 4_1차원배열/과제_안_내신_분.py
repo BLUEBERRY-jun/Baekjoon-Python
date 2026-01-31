@@ -15,10 +15,11 @@
 
 #set으로 차집합, for zip, remove로 가능함
 import sys
-x_list = range(1,30)
+x_list = range(1,31)
 y_list = list(map(int,sys.stdin.read().split()))
 result_list = list(set(x_list)-set(y_list))
 result_list.sort()
 
 for i in result_list:
+
     print(i)
