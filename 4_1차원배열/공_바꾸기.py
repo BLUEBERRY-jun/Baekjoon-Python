@@ -1,10 +1,23 @@
-import sys
+# import sys
 
+# N, M = map(int, sys.stdin.readline().split())
+# baskets = list(range(N+1))
+
+# for _ in range(M):
+#     i, j = map(int, sys.stdin.readline().split())
+#     baskets[i], baskets[j] = baskets[j], baskets[i]
+
+# print(*baskets[1:])
+
+
+
+
+import sys
 N, M = map(int, sys.stdin.readline().split())
-baskets = list(range(N+1))
+baskets = list(range(1,N+1))  
 
 for _ in range(M):
     i, j = map(int, sys.stdin.readline().split())
-    baskets[i], baskets[j] = baskets[j], baskets[i]
+    baskets[i-1],baskets[j-1] = baskets[j-1], baskets[i-1]
 
-print(*baskets[1:])
+print (*baskets)
