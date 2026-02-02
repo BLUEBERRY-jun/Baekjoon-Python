@@ -6,12 +6,28 @@
 #     if i in "ABC":
 #         total += 3
 
-alphabet = input()
+# alphabet = input()
+# dial = ["ABC", "DEF", "GHI", "JKL", "MNO", "PQRS", "TUV", "WXYZ"]
+# total = 0
+
+# for i in alphabet:
+#     for d in dial:
+#         if i in d:
+#             total += dial.index(d)+3
+# print(total)
+
+
+
+
+
+import sys
+x = list(sys.stdin.readline())
 dial = ["ABC", "DEF", "GHI", "JKL", "MNO", "PQRS", "TUV", "WXYZ"]
 total = 0
 
-for i in alphabet:
+for i in x:
     for d in dial:
         if i in d:
             total += dial.index(d)+3
+
 print(total)
