@@ -7,10 +7,21 @@
 # print(len(cro))
 
 
-x = input()
+# x = input()
+# y = ["c=", "c-","dz=","d-","lj", "nj", "s=", "z="]
+
+# for i in y:
+#     x = x.replace(i,"*")
+
+# print(len(x))
+
+
+
+
+
+x=input()
 y = ["c=", "c-","dz=","d-","lj", "nj", "s=", "z="]
 
 for i in y:
-    x = x.replace(i,"*")
-
+    x=x.replace(i,"*")
 print(len(x))
