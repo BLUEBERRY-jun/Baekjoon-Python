@@ -16,18 +16,37 @@
 
 
 
-import sys
+# import sys
 
-N = int(input())
+# N = int(input())
 
-result = 0
-for _ in range(N):
-    M = sys.stdin.readline().strip() #strip해야함
+# result = 0
+# for _ in range(N):
+#     M = sys.stdin.readline().strip() #strip해야함
 
-    for i in range(len(M)-1): #마지막 전까지만 확인해야함 밑에줄에 i+1이 있잖아
-        if M[i] != M[i+1] and M[i] in M[i+1:]: #==이 아니라 in
-            break
-    else:   #for이랑 묶여서 for문이 끝까지 실행될시 else실행
-        result += 1
+#     for i in range(len(M)-1): #마지막 전까지만 확인해야함 밑에줄에 i+1이 있잖아
+#         if M[i] != M[i+1] and M[i] in M[i+1:]: #==이 아니라 in
+#             break
+#     else:   #for이랑 묶여서 for문이 끝까지 실행될시 else실행
+#         result += 1
         
-print (result)
+# print (result)
+
+
+
+
+
+import sys
+N = int(sys.stdin.readline())
+
+group_w = 0
+
+for _ in range(N):
+    w = sys.stdin.readline().strip()
+    for i in range(len(w)-1):
+        if w[i]!=w[i+1] and w[i] in w[i+1:]:
+            break
+    else:   #for이랑 묶어야함;;; 계속 이런다
+        group_w +=1 
+
+print(group_w)
