@@ -47,12 +47,24 @@ for i in range (n-1, 0, -1):
 # print(*lines + lines[:-1][::-1], sep="\n")    
 
 
-import sys
-N = int(sys.stdin.readline())
+# import sys
+# N = int(sys.stdin.readline())
 
-lines = []
-for i in range(N):
-    lines.append(" "*(N-1-i)+"*"*(i*2+1))  #변수명.append() =사용 ㄴㄴ
+# lines = []
+# for i in range(N):
+#     lines.append(" "*(N-1-i)+"*"*(i*2+1))  #변수명.append() =사용 ㄴㄴ
     
 
-print (*lines + lines[:-1][::-1], sep="\n") #글자 ::-1 리스트 ::-1 차이 인지
+# print (*lines + lines[:-1][::-1], sep="\n") #글자 ::-1 리스트 ::-1 차이 인지
+
+
+
+
+
+x = int(input())
+x_list = []
+for i in range(x):
+    x_list.append(" "*(x-1-i)+"*"*(i*2+1))
+
+print(*x_list, sep="\n")
+print(*x_list[:x-1][::-1], sep="\n")
