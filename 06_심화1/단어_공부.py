@@ -18,16 +18,37 @@
 
 
 
-x = input().upper()
-y = list(set(x))
+# x = input().upper()
+# y = list(set(x))
 
-counts = []
-max_count = 0
-for i in y:
-    counts.append(x.count(i)) # y 개수 센 리스트 생성
+# counts = []
+# max_count = 0
+# for i in y:
+#     counts.append(x.count(i)) # y 개수 센 리스트 생성
 
     
-if counts.count(max(counts))>1:
-    print ("?")
+# if counts.count(max(counts))>1:
+#     print ("?")
+# else:
+#     print (y[counts.index(max(counts))])
+
+
+
+
+
+
+x=input().upper()
+y=list(set(x))
+
+y_val = []
+z=0
+
+for i in y:
+    y_val.append(x.count(i))    #각 알파벳 개수 정리
+
+
+if y_val.count(max(y_val))>1:
+    print("?")
 else:
-    print (y[counts.index(max(counts))])
+    z=y_val.index(max(y_val))
+    print(y[z])
