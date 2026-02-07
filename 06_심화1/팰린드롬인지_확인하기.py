@@ -63,18 +63,30 @@ else:
 
 
 
-import sys
+# import sys
 
-word = list(sys.stdin.readline().strip()) #strip으로 마지막에 있는 \n삭제
+# word = list(sys.stdin.readline().strip()) #strip으로 마지막에 있는 \n삭제
 
-result = 1 #0으로 하면 a한글자일때 0으로 출력되서 안됨
-for i in range(len(word)//2):
-    if word[i] == word[::-1][i]: #word[::-1][i] word[i][::-1] 차이 인지
-        result = 1
-    else:
-        result = 0
-        break
+# result = 1 #0으로 하면 a한글자일때 0으로 출력되서 안됨
+# for i in range(len(word)//2):
+#     if word[i] == word[::-1][i]: #word[::-1][i] word[i][::-1] 차이 인지
+#         result = 1
+#     else:
+#         result = 0
+#         break
 
-print (result)
+# print (result)
 
 #다음엔 for문 없이 만들어 볼것
+
+
+
+
+
+import sys
+x = sys.stdin.readline().strip()
+
+if x == x[::-1]:
+    print("1")
+else:
+    print("0")
