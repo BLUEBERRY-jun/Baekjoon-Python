@@ -42,22 +42,68 @@
 
 
 
+# import sys
+
+# M = []
+# for i in range(9):
+#     M.append(list(map(int, sys.stdin.readline().split())))
+
+# Max_value = -1
+# Max_x = 0
+# Max_y = 0
+
+# for i in range(9):
+#     for j in range(9):
+#         if M[i][j] > Max_value:
+#             Max_value = M[i][j]
+#             Max_x = i+1
+#             Max_y = j+1
+
+# print (Max_value)
+# print (Max_x, Max_y) # 3번째
+
+
+
+
+
+# import sys
+# max_num = 0
+# max_line = 0
+# for i in range(9):
+#     N = int(sys.stdin.readline())
+#     if N > max_num:
+#         max_num = N
+#         max_line = i+1
+
+# print(max_num)
+# print(max_line)   #2562번
+
+
+
+
+# import sys
+
+# num = list(map(int, sys.stdin.read().split()))
+
+# print(max(num))
+# print(num.index(max(num))+1)    #2562번
+
+
+
+
+
 import sys
 
-M = []
+num_m = -1
+x, y = 0, 0
 for i in range(9):
-    M.append(list(map(int, sys.stdin.readline().split())))
-
-Max_value = -1
-Max_x = 0
-Max_y = 0
-
-for i in range(9):
+    num=list(map(int, sys.stdin.readline().split()))
     for j in range(9):
-        if M[i][j] > Max_value:
-            Max_value = M[i][j]
-            Max_x = i+1
-            Max_y = j+1
 
-print (Max_value)
-print (Max_x, Max_y) # 3번째
+        if num[j] > num_m:
+            num_m = num[j]
+            x = j
+            y = i
+            
+print(num_m)
+print (y+1, x+1)    #2566번
