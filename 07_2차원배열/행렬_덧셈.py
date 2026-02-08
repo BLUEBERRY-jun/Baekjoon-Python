@@ -36,22 +36,41 @@
 #     print () # 2번째 내일 다시
 
 
+# import sys
+
+# N, M = map(int, sys.stdin.readline().split())
+
+# list_x = []
+# list_y = []
+
+
+# for i in range(N):
+#     list_x.append(list(map(int, sys.stdin.readline().split())))
+
+# for j in range(N):
+#     list_y.append(list(map(int, sys.stdin.readline().split())))
+
+# for i in range(N):
+#     for j in range(M):
+#         print (list_x[i][j] + list_y[i][j], end=" ")
+#     print () #3번째
+
+
+
+
+
 import sys
-
 N, M = map(int, sys.stdin.readline().split())
-
-list_x = []
-list_y = []
-
+list_1 = []
+list_2 = []
 
 for i in range(N):
-    list_x.append(list(map(int, sys.stdin.readline().split())))
-
-for j in range(N):
-    list_y.append(list(map(int, sys.stdin.readline().split())))
+    list_1.append(list(map(int, sys.stdin.readline().split())))
+                  
+for j in range(M):
+    list_2.append(list(map(int, sys.stdin.readline().split())))
 
 for i in range(N):
     for j in range(M):
-        print (list_x[i][j] + list_y[i][j], end=" ")
-    print () #3번째
-
+        print(list_1[i][j]+list_2[i][j], end=" ")
+    print()
